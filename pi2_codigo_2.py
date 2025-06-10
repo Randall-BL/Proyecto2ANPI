@@ -1,3 +1,17 @@
+####################################################
+
+# Proyecto 2  
+# Análisis Numérico Para La Ingeniería GR 1
+# I - Semestre 2025
+# Grupo de trabajo # 2
+# Integrantes:
+# Emanuel Chavarría Hernández
+# Fernando Fuchs Mora
+# Javier Tenorio Cervantes
+# Randall Bolaños López
+
+####################################################
+
 import numpy as np
 import matplotlib.pyplot as plt
 import sympy as sp
@@ -163,7 +177,7 @@ def T_exact(t):
 # 5) Imprimir polinomios de Hermite H_n(x) para n = 0..5
 x = sp.symbols('x')
 print("Polinomios de Hermite obtenidos H_n(x):")
-for n in range(6):
+for n in range(8):
     r = sp.symbols('r', integer=True, nonnegative=True)
     summ = sp.summation(
         (-1)**r * sp.factorial(n)/(sp.factorial(r)*sp.factorial(n-2*r)) * (2*x)**(n-2*r),
