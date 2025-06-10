@@ -122,6 +122,15 @@ def hermite_interpolation_symbolic(x, y, dy):
 # Ejecutar el Método de Euler para obtener los pares de tiempo y temperatura
 t_points, T_points = euler_method(T0, T_s, K, h, t_final)
 
+# *** PRINT DE LOS PARES ORDENADOS DEL MÉTODO DE EULER ***
+print("Pares ordenados obtenidos por el método de Euler:")
+print("---------------------------------------------")
+print("{:<10} {:<15}".format("Tiempo (min)", "Temperatura (°C)"))
+print("---------------------------------------------")
+for i in range(len(t_points)):
+    print("{:<10.2f} {:<15.4f}".format(t_points[i], T_points[i]))
+print("---------------------------------------------")
+# ********************************************************
 # Calcular las derivadas de la temperatura en los puntos
 dT_points = dT_dt(T_points, T_s, K)
 
